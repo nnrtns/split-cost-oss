@@ -77,3 +77,12 @@
     "simplify" : true
 }
 ```
+
+## Story for using the APIs
+- Create a trip using the POST /trip API.
+- Add participants to the trip using the PUT /trip/{trip_id} API.
+- Add transactions to the trip using the POST /trip/{trip_id}/transactions API.
+- Get the details of the trip using the GET /trip/{trip_id}/details API.
+- Get the details of all trips using the GET /trips API.
+- Get the details of all trips using the GET /trips/{trip_id}/details API.
+- Get the settlement details of the trip using the POST /trip/{trip_id}/settlement API.

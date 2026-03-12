@@ -11,7 +11,7 @@ import com.getcollate.expense_splitter.pojo.POSTTripRequest;
 @RequestMapping("/trip")
 public class TripController {
 
-    @PostMapping("/")
+    @PostMapping
     public @ResponseBody Map<String, Object> postTrip(
             @RequestBody POSTTripRequest tripRequest) {
         System.out.println("Trip Name: " + tripRequest);
