@@ -1,4 +1,4 @@
-package com.getcollate.expense_splitter;
+package com.getcollate.expenseSplitter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

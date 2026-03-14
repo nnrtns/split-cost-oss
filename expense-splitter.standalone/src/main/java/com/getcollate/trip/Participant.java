@@ -5,4 +5,7 @@ public record Participant(String name, String participantId) {
     public Participant(String name) {
         this(name, name);
     }
+    public String toString() {
+        return name;
+    }
 }

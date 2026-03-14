@@ -1,10 +1,18 @@
-package com.getcollate.expense_splitter.pojo;
+package com.getcollate.expenseSplitter.pojo;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
 public class POSTTripRequest {
+    @NotBlank(message = "Trip name cannot be blank.")
     String name;
-    List<String> participants;
+
+    @NotNull(message = "Trip participants cannot be null.")
+    @NotEmpty(message = "Trip participants cannot be blank.")
+    List<@NotBlank(message = "null cannot be a Participant.") String> participants;
 
     @java.lang.Override
     public java.lang.String toString() {
