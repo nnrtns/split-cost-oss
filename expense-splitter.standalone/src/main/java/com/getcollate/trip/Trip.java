@@ -5,10 +5,7 @@ import com.getcollate.trip.accounts.settler.Debt;
 import com.getcollate.trip.accounts.settler.Settler;
 import com.getcollate.trip.accounts.Transaction;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Trip {
     String tripId;
@@ -29,6 +26,7 @@ public class Trip {
     public Trip(String tripName, List<Participant> participants) {
         // trip id will be set automatically and should be unique
         // generate a unique trip id using the tripName and participants
+        this.tripId = UUID.randomUUID().toString();
         this.tripName = tripName;
         if (participants == null || participants.isEmpty())
             throw new RuntimeException("Participants cannot be empty");
@@ -59,7 +57,7 @@ public class Trip {
     public Participant getParticipant(String participantName) {
         Participant participant = participantMap.get(participantName);
         if (participant == null)
-            throw new RuntimeException("Participant not found in the trip: " + this.tripName + " with id: " + this.tripId);
+            throw new RuntimeException("Participant not found in the trip: " + this.tripName + " with id: " + this.tripId + " and participant name: " + participantName);
         return participant;
     }
 

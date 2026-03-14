@@ -1,13 +1,13 @@
 package com.getcollate.expenseSplitter.repository;
 
 import com.getcollate.expenseSplitter.exception.ValidationException;
+import com.getcollate.trip.Participant;
 import com.getcollate.trip.Trip;
 import com.getcollate.trip.accounts.Transaction;
 import com.getcollate.trip.accounts.settler.Debt;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -35,16 +35,48 @@ public class InMemoryRepository implements TripRepository, SettlementRepository,
     }
 
     @Override
-    public Trip updateTrip(String tripId, Trip trip) {
+    public Trip addParticipants(String tripId, List<Participant> participants) {
+        if (trips.get(tripId) == null)
+            throw new ValidationException("Trip not found");
         trips.compute(tripId, (key, existingTrip) -> {
             if (existingTrip == null)
                 throw new ValidationException("You are trying to update a trip that does not exist");
-
-            existingTrip.setParticipants(trip.getParticipants());
+            participants.forEach(participant -> {
+                try {
+                    for (Participant p : existingTrip.getParticipants())
+                        if (p.participantId().equals(participant.participantId()))
+                            throw new ValidationException("Participant already exists. Cannot add duplicate participant: " + participant.participantId());
+                } catch (RuntimeException e) {
+                    throw new ValidationException(e.getMessage());
+                }
+            });
+            existingTrip.addParticipants(participants);
 
             return existingTrip;
         });
         return trips.get(tripId);
+    }
+
+    @Override
+    public Trip removeParticipants(String tripId, List<String> participants) {
+        if (trips.get(tripId) == null)
+            throw new ValidationException("Trip not found");
+        Trip trip = trips.compute(tripId, (key, existingTrip) -> {
+            if (existingTrip == null)
+                throw new ValidationException("You are trying to update a trip that does not exist");
+            boolean present = true;
+            participants.forEach(participant -> {
+                try {
+                    existingTrip.getParticipant(participant);
+                } catch (RuntimeException e) {
+                    throw new ValidationException(e.getMessage());
+                }
+            });
+            existingTrip.removeParticipants(participants);
+
+            return existingTrip;
+        });
+        return trip;
     }
 
     @Override
@@ -59,6 +91,8 @@ public class InMemoryRepository implements TripRepository, SettlementRepository,
 
     @Override
     public List<Trip> getAllTrips() {
+        if (trips.isEmpty())
+            throw new ValidationException("No trips found");
         return new ArrayList<>(trips.values());
     }
 
@@ -80,6 +114,13 @@ public class InMemoryRepository implements TripRepository, SettlementRepository,
             return existingTrip;
         }));
         return false;
+    }
+
+    @Override
+    public Trip getTrip(String tripId) {
+        if (trips.get(tripId) == null)
+            throw new ValidationException("Trip not found");
+        return trips.get(tripId);
     }
 
     @Override
@@ -122,5 +163,12 @@ public class InMemoryRepository implements TripRepository, SettlementRepository,
             throw new ValidationException("Duplicate transactions found: " + duplicates);
         existingTransaction.addAll(transaction);
         return true;
+    }
+
+    @Override
+    public Trip getTripForTransaction(String tripId) throws ValidationException {
+        if (trips.get(tripId) == null)
+            throw new ValidationException("Trip not found");
+        return trips.get(tripId);
     }
 }

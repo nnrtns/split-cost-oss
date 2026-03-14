@@ -72,7 +72,7 @@ public class SimplifiedSettler implements Settler {
         for (int i = start + 1; i < balances.size(); i++) {
             int candidateBalance = balances.get(i);
 
-            if (startBalance * candidateBalance >= 0) {
+            if (candidateBalance == 0 || startBalance * candidateBalance >= 0) {
                 continue; // must be opposite signs
             }
 
@@ -87,50 +87,68 @@ public class SimplifiedSettler implements Settler {
             int balanceI = balances.get(i);
             int balanceJ = balances.get(j);
 
-            boolean exactI = (startBalance + balanceI == 0);
-            boolean exactJ = (startBalance + balanceJ == 0);
+            boolean exactI = Math.abs(startBalance) == Math.abs(balanceI);
+            boolean exactJ = Math.abs(startBalance) == Math.abs(balanceJ);
 
             if (exactI != exactJ) {
                 return exactI ? -1 : 1; // exact cancellation first
             }
 
             return Integer.compare(Math.abs(balanceJ), Math.abs(balanceI));
-            // bigger opposite balance first
         });
 
         for (int i : candidateIndices) {
             int candidateBalance = balances.get(i);
+            int transferInCents = Math.min(Math.abs(startBalance), Math.abs(candidateBalance));
 
-            Debt settlementDebt = createDebt(
-                    participantNames.get(start),
-                    participantNames.get(i),
-                    startBalance
-            );
+            Debt settlementDebt;
+            int newStartBalance;
+            int newCandidateBalance;
 
-            balances.set(i, candidateBalance + startBalance);
-            balances.set(start, 0);
+            if (startBalance < 0) {
+                // start is debtor, candidate is creditor
+                settlementDebt = createDebt(
+                        participantNames.get(start),
+                        participantNames.get(i),
+                        transferInCents
+                );
+                newStartBalance = startBalance + transferInCents;
+                newCandidateBalance = candidateBalance - transferInCents;
+            } else {
+                // start is creditor, candidate is debtor
+                settlementDebt = createDebt(
+                        participantNames.get(i),
+                        participantNames.get(start),
+                        transferInCents
+                );
+                newStartBalance = startBalance - transferInCents;
+                newCandidateBalance = candidateBalance + transferInCents;
+            }
+
+            balances.set(start, newStartBalance);
+            balances.set(i, newCandidateBalance);
             currentDebts.add(settlementDebt);
 
-            dfs(start + 1, participantNames, balances, currentDebts, bestSolution);
+            dfs(
+                    newStartBalance == 0 ? start + 1 : start,
+                    participantNames,
+                    balances,
+                    currentDebts,
+                    bestSolution
+            );
 
             currentDebts.remove(currentDebts.size() - 1);
             balances.set(start, startBalance);
             balances.set(i, candidateBalance);
 
-            if (candidateBalance + startBalance == 0) {
-                break; // exact cancellation is the strongest branch
+            if (Math.abs(startBalance) == Math.abs(candidateBalance)) {
+                break; // strongest pruning: both sides close out exactly
             }
         }
     }
 
-    private Debt createDebt(String startParticipant, String otherParticipant, int startBalanceInCents) {
-        float amount = fromCents(Math.abs(startBalanceInCents));
-
-        if (startBalanceInCents < 0) {
-            return new Debt(startParticipant, otherParticipant, amount);
-        }
-
-        return new Debt(otherParticipant, startParticipant, amount);
+    private Debt createDebt(String fromParticipant, String toParticipant, int amountInCents) {
+        return new Debt(fromParticipant, toParticipant, fromCents(amountInCents));
     }
 
     private Map<String, Integer> buildNetBalancesInCents(List<Transaction> transactions) {

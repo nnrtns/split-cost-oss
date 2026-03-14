@@ -5,13 +5,10 @@ import java.util.Map;
 
 import com.getcollate.expenseSplitter.pojo.PUTTripRequest;
 import com.getcollate.expenseSplitter.service.TripService;
-import com.getcollate.expenseSplitter.exception.DuplicateInsertionException;
-import com.getcollate.expenseSplitter.exception.ValidationException;
 import com.getcollate.trip.Trip;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,14 +33,20 @@ public class TripController {
         return ResponseEntity.ok().body(Map.of("tripId", response.getTripId(), "tripName", response.getTripName(), "participants", response.getParticipants()));
     }
 
-    @PutMapping("/{tripId}")
-    public @ResponseBody ResponseEntity<Map<String, Object>> putTrip(
+    @PostMapping("/{tripId}/participants")
+    public @ResponseBody ResponseEntity<Map<String, Object>> addParticipants(
             @Valid @RequestBody PUTTripRequest tripRequest, @PathVariable String tripId) {
         logger.info("Trip Name: " + tripRequest + " Trip Id: " + tripId);
-        service.addParticipants(tripId, tripRequest.getAddParticipants());
-        Trip response = service.removeParticipants(tripId, tripRequest.getRemoveParticipants());
+        Trip response = service.addParticipants(tripId, tripRequest.getParticipants());
         return ResponseEntity.ok().body(Map.of("tripId", response.getTripId(), "tripName", response.getTripName(), "participants", response.getParticipants()));
-//        return null;
+    }
+
+    @DeleteMapping("/{tripId}/participants")
+    public @ResponseBody ResponseEntity<Map<String, Object>> removeParticipants(
+            @Valid @RequestBody PUTTripRequest tripRequest, @PathVariable String tripId) {
+        logger.info("Trip Name: " + tripRequest + " Trip Id: " + tripId);
+        Trip response = service.removeParticipants(tripId, tripRequest.getParticipants());
+        return ResponseEntity.ok().body(Map.of("tripId", response.getTripId(), "tripName", response.getTripName(), "participants", response.getParticipants()));
     }
 
     @GetMapping("/{tripId}/details")
