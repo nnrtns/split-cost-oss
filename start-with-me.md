@@ -182,7 +182,7 @@ Here is the minimal exact flow to get productive fast:
 ```bash
 cd developer-psd
 ./setup.sh
-cd documents/postman
+cd docs/postman
 npm install
 BASE_URL=http://localhost:8080 bash run-newman.sh
 ```
@@ -212,14 +212,14 @@ Run:
 
 ```bash
 chmod +x setup.sh teardown.sh
-chmod +x documents/postman/run-newman.sh
+chmod +x docs/postman/run-newman.sh
 ```
 
 ### Postman/Newman run fails because `npm` is missing
 Install Node.js and npm, then rerun:
 
 ```bash
-cd developer-psd/documents/postman
+cd developer-psd/docs/postman
 npm install
 BASE_URL=http://localhost:8080 bash run-newman.sh
 ```
@@ -228,7 +228,7 @@ BASE_URL=http://localhost:8080 bash run-newman.sh
 Check:
 - `docker ps`
 - app is listening on `http://localhost:8080`
-- you ran Newman from `developer-psd/documents/postman`
+- you ran Newman from `developer-psd/docs/postman`
 - `BASE_URL` is set to `http://localhost:8080`
 
 ### Need to rerun from scratch
@@ -238,11 +238,11 @@ Use:
 cd developer-psd
 ./teardown.sh
 ./setup.sh
-cd documents/postman
+cd docs/postman
 BASE_URL=http://localhost:8080 bash run-newman.sh
 ```
 
 ## One-command mental model
 - `./setup.sh` = bring up everything
-- `BASE_URL=http://localhost:8080 bash run-newman.sh` from `/documents/postman` = verify everything
+- `BASE_URL=http://localhost:8080 bash run-newman.sh` from `/docs/postman` = verify everything
 - `./teardown.sh` = bring it all down
