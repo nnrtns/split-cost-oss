@@ -1,122 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Expense Splitter - Automated E2E" tests="22" time="0.189">
-  <testsuite name="01 - Participant Management Flow / Create participant-flow trip" id="bc0eb047-32ac-494a-98b2-1b7562704eb6" timestamp="2026-03-16T15:32:06.328Z" tests="3" failures="0" errors="0" time="0.024">
-    <testcase name="Status is 200" time="0.024" classname="01ParticipantManagementFlowCreateParticipantFlowTrip"/>
-    <testcase name="Trip id is returned" time="0.024" classname="01ParticipantManagementFlowCreateParticipantFlowTrip"/>
-    <testcase name="Three participants are returned" time="0.024" classname="01ParticipantManagementFlowCreateParticipantFlowTrip"/>
+<testsuites name="Expense Splitter - Automated E2E" tests="22" time="0.758">
+  <testsuite name="01 - Participant Management Flow / Create participant-flow trip" id="3cf6b8a4-3123-47e2-b97a-2fe7c705111d" timestamp="2026-03-20T18:35:26.806Z" tests="3" failures="0" errors="0" time="0.442">
+    <testcase name="Status is 200" time="0.442" classname="01ParticipantManagementFlowCreateParticipantFlowTrip"/>
+    <testcase name="Trip id is returned" time="0.442" classname="01ParticipantManagementFlowCreateParticipantFlowTrip"/>
+    <testcase name="Three participants are returned" time="0.442" classname="01ParticipantManagementFlowCreateParticipantFlowTrip"/>
   </testsuite>
-  <testsuite name="01 - Participant Management Flow / Add one participant" id="6c4fb9de-b4f8-4855-b452-6dd3581cab37" timestamp="2026-03-16T15:32:06.328Z" tests="3" failures="0" errors="0" time="0.014">
-    <testcase name="Status is 200" time="0.014" classname="01ParticipantManagementFlowAddOneParticipant"/>
-    <testcase name="Participant list now has four entries" time="0.014" classname="01ParticipantManagementFlowAddOneParticipant"/>
-    <testcase name="Added participant Kiran is present" time="0.014" classname="01ParticipantManagementFlowAddOneParticipant"/>
+  <testsuite name="01 - Participant Management Flow / Add one participant" id="30a94966-2bb3-4a25-b6d5-9d188f2aa0c0" timestamp="2026-03-20T18:35:26.806Z" tests="3" failures="0" errors="0" time="0.073">
+    <testcase name="Status is 200" time="0.073" classname="01ParticipantManagementFlowAddOneParticipant"/>
+    <testcase name="Participant list now has four entries" time="0.073" classname="01ParticipantManagementFlowAddOneParticipant"/>
+    <testcase name="Added participant Kiran is present" time="0.073" classname="01ParticipantManagementFlowAddOneParticipant"/>
   </testsuite>
-  <testsuite name="01 - Participant Management Flow / Get participant-flow trip details" id="d905716f-c0dc-40a3-b55d-fa8ee6dd438e" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.007">
-    <testcase name="Status is 200" time="0.007" classname="01ParticipantManagementFlowGetParticipantFlowTripDetails"/>
-    <testcase name="Trip contains four participants" time="0.007" classname="01ParticipantManagementFlowGetParticipantFlowTripDetails"/>
+  <testsuite name="01 - Participant Management Flow / Get participant-flow trip details" id="39270e4a-ede6-48c9-9974-b47c85310065" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="Status is 200" time="0.009" classname="01ParticipantManagementFlowGetParticipantFlowTripDetails"/>
+    <testcase name="Trip contains four participants" time="0.009" classname="01ParticipantManagementFlowGetParticipantFlowTripDetails"/>
   </testsuite>
-  <testsuite name="01 - Participant Management Flow / Remove added participant" id="10f1f232-9041-43d8-868f-da1d338537bf" timestamp="2026-03-16T15:32:06.328Z" tests="3" failures="0" errors="0" time="0.008">
-    <testcase name="Status is 200" time="0.008" classname="01ParticipantManagementFlowRemoveAddedParticipant"/>
-    <testcase name="Participant list is back to three" time="0.008" classname="01ParticipantManagementFlowRemoveAddedParticipant"/>
-    <testcase name="Kiran is absent after deletion" time="0.008" classname="01ParticipantManagementFlowRemoveAddedParticipant"/>
+  <testsuite name="01 - Participant Management Flow / Remove added participant" id="6325a5ff-9124-47f1-a263-a044d4988b17" timestamp="2026-03-20T18:35:26.806Z" tests="3" failures="0" errors="0" time="0.015">
+    <testcase name="Status is 200" time="0.015" classname="01ParticipantManagementFlowRemoveAddedParticipant"/>
+    <testcase name="Participant list is back to three" time="0.015" classname="01ParticipantManagementFlowRemoveAddedParticipant"/>
+    <testcase name="Kiran is absent after deletion" time="0.015" classname="01ParticipantManagementFlowRemoveAddedParticipant"/>
   </testsuite>
-  <testsuite name="01 - Participant Management Flow / Delete participant-flow trip" id="687a569f-b02c-4eca-ae8a-c4bc8313874f" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.006">
-    <testcase name="Status is 200" time="0.006" classname="01ParticipantManagementFlowDeleteParticipantFlowTrip"/>
-    <testcase name="Deleted trip id is echoed back" time="0.006" classname="01ParticipantManagementFlowDeleteParticipantFlowTrip"/>
+  <testsuite name="01 - Participant Management Flow / Delete participant-flow trip" id="ea001a68-2eee-4714-bce1-763cd5a81696" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="Status is 200" time="0.009" classname="01ParticipantManagementFlowDeleteParticipantFlowTrip"/>
+    <testcase name="Deleted trip id is echoed back" time="0.009" classname="01ParticipantManagementFlowDeleteParticipantFlowTrip"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Create settlement-flow trip" id="a484cbeb-0748-4b39-829d-7dd603179335" timestamp="2026-03-16T15:32:06.328Z" tests="10" failures="0" errors="0" time="0.010">
-    <testcase name="Status is 200" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Eight participants are returned" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Alice" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Bob" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Smith" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Wonder" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Mat" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Philips" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Aleena" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
-    <testcase name="Participant id captured for Kimberly" time="0.010" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+  <testsuite name="02 - Settlement E2E Flow / Create settlement-flow trip" id="2f119cc9-b2cf-4c40-a877-683f2833e7aa" timestamp="2026-03-20T18:35:26.806Z" tests="10" failures="0" errors="0" time="0.012">
+    <testcase name="Status is 200" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Eight participants are returned" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Alice" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Bob" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Smith" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Wonder" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Mat" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Philips" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Aleena" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
+    <testcase name="Participant id captured for Kimberly" time="0.012" classname="02SettlementE2EFlowCreateSettlementFlowTrip"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Get settlement-flow trip details" id="7327163d-5e88-4912-88d9-2f4c1d0db9ef" timestamp="2026-03-16T15:32:06.328Z" tests="3" failures="0" errors="0" time="0.006">
-    <testcase name="Status is 200" time="0.006" classname="02SettlementE2EFlowGetSettlementFlowTripDetails"/>
-    <testcase name="Trip id matches the created trip" time="0.006" classname="02SettlementE2EFlowGetSettlementFlowTripDetails"/>
-    <testcase name="Trip contains eight participants" time="0.006" classname="02SettlementE2EFlowGetSettlementFlowTripDetails"/>
+  <testsuite name="02 - Settlement E2E Flow / Get settlement-flow trip details" id="8f1ee373-0786-46bf-bced-8e0d13400b34" timestamp="2026-03-20T18:35:26.806Z" tests="3" failures="0" errors="0" time="0.008">
+    <testcase name="Status is 200" time="0.008" classname="02SettlementE2EFlowGetSettlementFlowTripDetails"/>
+    <testcase name="Trip id matches the created trip" time="0.008" classname="02SettlementE2EFlowGetSettlementFlowTripDetails"/>
+    <testcase name="Trip contains eight participants" time="0.008" classname="02SettlementE2EFlowGetSettlementFlowTripDetails"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Post dynamic transactions" id="f2b57028-8e23-4a09-b227-3c3d6811d784" timestamp="2026-03-16T15:32:06.328Z" tests="3" failures="0" errors="0" time="0.018">
-    <testcase name="Status is 200" time="0.018" classname="02SettlementE2EFlowPostDynamicTransactions"/>
-    <testcase name="Four transactions are created" time="0.018" classname="02SettlementE2EFlowPostDynamicTransactions"/>
-    <testcase name="All transaction ids are captured" time="0.018" classname="02SettlementE2EFlowPostDynamicTransactions"/>
+  <testsuite name="02 - Settlement E2E Flow / Post dynamic transactions" id="c19ca01e-25a5-4d52-8f5f-b3e9a3bed606" timestamp="2026-03-20T18:35:26.806Z" tests="3" failures="0" errors="0" time="0.049">
+    <testcase name="Status is 200" time="0.049" classname="02SettlementE2EFlowPostDynamicTransactions"/>
+    <testcase name="Four transactions are created" time="0.049" classname="02SettlementE2EFlowPostDynamicTransactions"/>
+    <testcase name="All transaction ids are captured" time="0.049" classname="02SettlementE2EFlowPostDynamicTransactions"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Compute basic settlement" id="0d9e0a63-5aaf-4dbe-b8fc-c548a9363a9d" timestamp="2026-03-16T15:32:06.328Z" tests="21" failures="0" errors="0" time="0.018">
-    <testcase name="Status is 200" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Settlement response is an array" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement is non-empty" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 1 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 2 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 3 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 4 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 5 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 6 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 7 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 8 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 9 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 10 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 11 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 12 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 13 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 14 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 15 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 16 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 17 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
-    <testcase name="Basic settlement row 18 is well formed" time="0.018" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+  <testsuite name="02 - Settlement E2E Flow / Compute basic settlement" id="0869c86e-58d3-422d-a8f6-ef2e9e055fb2" timestamp="2026-03-20T18:35:26.806Z" tests="21" failures="0" errors="0" time="0.029">
+    <testcase name="Status is 200" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Settlement response is an array" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement is non-empty" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 1 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 2 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 3 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 4 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 5 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 6 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 7 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 8 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 9 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 10 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 11 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 12 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 13 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 14 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 15 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 16 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 17 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
+    <testcase name="Basic settlement row 18 is well formed" time="0.029" classname="02SettlementE2EFlowComputeBasicSettlement"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Compute simplified settlement" id="54fc6417-0d35-4d2f-9506-09a70d52a472" timestamp="2026-03-16T15:32:06.328Z" tests="4" failures="0" errors="0" time="0.013">
-    <testcase name="Status is 200" time="0.013" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
-    <testcase name="Settlement response is an array" time="0.013" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
-    <testcase name="Simplified settlement is non-empty" time="0.013" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
-    <testcase name="Simplified settlement is not longer than the basic settlement" time="0.013" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
+  <testsuite name="02 - Settlement E2E Flow / Compute simplified settlement" id="06854574-332a-4c41-a2af-5c9ec83bb2fa" timestamp="2026-03-20T18:35:26.806Z" tests="4" failures="0" errors="0" time="0.024">
+    <testcase name="Status is 200" time="0.024" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
+    <testcase name="Settlement response is an array" time="0.024" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
+    <testcase name="Simplified settlement is non-empty" time="0.024" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
+    <testcase name="Simplified settlement is not longer than the basic settlement" time="0.024" classname="02SettlementE2EFlowComputeSimplifiedSettlement"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Delete first transaction" id="fffab361-cf49-4162-a2f3-1377246177a0" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.006">
-    <testcase name="Status is 200" time="0.006" classname="02SettlementE2EFlowDeleteFirstTransaction"/>
-    <testcase name="Deleted transaction id matches the stored id" time="0.006" classname="02SettlementE2EFlowDeleteFirstTransaction"/>
+  <testsuite name="02 - Settlement E2E Flow / Delete first transaction" id="8bd95ca4-2582-45d9-943c-358f98ced283" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.009">
+    <testcase name="Status is 200" time="0.009" classname="02SettlementE2EFlowDeleteFirstTransaction"/>
+    <testcase name="Deleted transaction id matches the stored id" time="0.009" classname="02SettlementE2EFlowDeleteFirstTransaction"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Recompute basic settlement after deletion" id="4587e076-1070-4441-9a77-5756bb14518f" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.011">
-    <testcase name="Status is 200" time="0.011" classname="02SettlementE2EFlowRecomputeBasicSettlementAfterDeletion"/>
-    <testcase name="Settlement after deletion is still an array" time="0.011" classname="02SettlementE2EFlowRecomputeBasicSettlementAfterDeletion"/>
+  <testsuite name="02 - Settlement E2E Flow / Recompute basic settlement after deletion" id="7fccea9f-92c2-4208-bbe2-f1b13ed776d1" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.018">
+    <testcase name="Status is 200" time="0.018" classname="02SettlementE2EFlowRecomputeBasicSettlementAfterDeletion"/>
+    <testcase name="Settlement after deletion is still an array" time="0.018" classname="02SettlementE2EFlowRecomputeBasicSettlementAfterDeletion"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Delete second transaction" id="20947541-0096-4355-8b79-f02e557535c1" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.006">
-    <testcase name="Status is 200" time="0.006" classname="02SettlementE2EFlowDeleteSecondTransaction"/>
-    <testcase name="Deleted transaction id matches the stored id" time="0.006" classname="02SettlementE2EFlowDeleteSecondTransaction"/>
+  <testsuite name="02 - Settlement E2E Flow / Delete second transaction" id="e8a4a1b4-8e59-4202-a75a-99dff1400d42" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.007">
+    <testcase name="Status is 200" time="0.007" classname="02SettlementE2EFlowDeleteSecondTransaction"/>
+    <testcase name="Deleted transaction id matches the stored id" time="0.007" classname="02SettlementE2EFlowDeleteSecondTransaction"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Delete third transaction" id="7f54fa0e-c65a-4288-8cc6-05728fff9d8e" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.005">
-    <testcase name="Status is 200" time="0.005" classname="02SettlementE2EFlowDeleteThirdTransaction"/>
-    <testcase name="Deleted transaction id matches the stored id" time="0.005" classname="02SettlementE2EFlowDeleteThirdTransaction"/>
+  <testsuite name="02 - Settlement E2E Flow / Delete third transaction" id="f166cba2-0b0e-4f8d-bca3-ae1d9630d20a" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="Status is 200" time="0.006" classname="02SettlementE2EFlowDeleteThirdTransaction"/>
+    <testcase name="Deleted transaction id matches the stored id" time="0.006" classname="02SettlementE2EFlowDeleteThirdTransaction"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Delete fourth transaction" id="b44d69f0-49d7-4b23-a286-6d46e1243e76" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.005">
-    <testcase name="Status is 200" time="0.005" classname="02SettlementE2EFlowDeleteFourthTransaction"/>
-    <testcase name="Deleted transaction id matches the stored id" time="0.005" classname="02SettlementE2EFlowDeleteFourthTransaction"/>
+  <testsuite name="02 - Settlement E2E Flow / Delete fourth transaction" id="1ae5aacf-3000-40a5-9b8f-8a2e4ae31a7e" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="Status is 200" time="0.006" classname="02SettlementE2EFlowDeleteFourthTransaction"/>
+    <testcase name="Deleted transaction id matches the stored id" time="0.006" classname="02SettlementE2EFlowDeleteFourthTransaction"/>
   </testsuite>
-  <testsuite name="02 - Settlement E2E Flow / Delete settlement-flow trip" id="2ef3aef9-ea37-48ce-aaf8-60ae8a425a01" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.005">
-    <testcase name="Status is 200" time="0.005" classname="02SettlementE2EFlowDeleteSettlementFlowTrip"/>
-    <testcase name="Deleted trip id is echoed back" time="0.005" classname="02SettlementE2EFlowDeleteSettlementFlowTrip"/>
+  <testsuite name="02 - Settlement E2E Flow / Delete settlement-flow trip" id="9ce39c52-a9ea-4172-a98b-775b958b4536" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="Status is 200" time="0.006" classname="02SettlementE2EFlowDeleteSettlementFlowTrip"/>
+    <testcase name="Deleted trip id is echoed back" time="0.006" classname="02SettlementE2EFlowDeleteSettlementFlowTrip"/>
   </testsuite>
-  <testsuite name="03 - Negative Validation Flow / Create trip with blank name should fail" id="6847f10d-5392-4f20-8509-67bf4d6ff1c3" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.003">
-    <testcase name="Status is 400" time="0.003" classname="03NegativeValidationFlowCreateTripWithBlankNameShouldFail"/>
-    <testcase name="Validation error contains the name field" time="0.003" classname="03NegativeValidationFlowCreateTripWithBlankNameShouldFail"/>
+  <testsuite name="03 - Negative Validation Flow / Create trip with blank name should fail" id="8c164bce-ea18-4d46-b667-21b402c8d5f1" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.006">
+    <testcase name="Status is 400" time="0.006" classname="03NegativeValidationFlowCreateTripWithBlankNameShouldFail"/>
+    <testcase name="Validation error contains the name field" time="0.006" classname="03NegativeValidationFlowCreateTripWithBlankNameShouldFail"/>
   </testsuite>
-  <testsuite name="03 - Negative Validation Flow / Create negative-flow trip" id="05790fc8-6a9c-43f2-901b-6c97969de38d" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.007">
+  <testsuite name="03 - Negative Validation Flow / Create negative-flow trip" id="d4479bfe-d39e-43ed-96bc-f1a75d62ca23" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.007">
     <testcase name="Status is 200" time="0.007" classname="03NegativeValidationFlowCreateNegativeFlowTrip"/>
     <testcase name="Negative-flow trip id captured" time="0.007" classname="03NegativeValidationFlowCreateNegativeFlowTrip"/>
   </testsuite>
-  <testsuite name="03 - Negative Validation Flow / Post invalid transaction should fail" id="9a724aa5-94aa-447c-80d6-84f9a500a883" timestamp="2026-03-16T15:32:06.328Z" tests="2" failures="0" errors="0" time="0.003">
-    <testcase name="Status is 400" time="0.003" classname="03NegativeValidationFlowPostInvalidTransactionShouldFail"/>
-    <testcase name="Validation error contains benefittedBy" time="0.003" classname="03NegativeValidationFlowPostInvalidTransactionShouldFail"/>
+  <testsuite name="03 - Negative Validation Flow / Post invalid transaction should fail" id="6025321e-f7e9-4e7d-90c0-10d29f9a10fe" timestamp="2026-03-20T18:35:26.806Z" tests="2" failures="0" errors="0" time="0.004">
+    <testcase name="Status is 400" time="0.004" classname="03NegativeValidationFlowPostInvalidTransactionShouldFail"/>
+    <testcase name="Validation error contains benefittedBy" time="0.004" classname="03NegativeValidationFlowPostInvalidTransactionShouldFail"/>
   </testsuite>
-  <testsuite name="03 - Negative Validation Flow / Delete negative-flow trip" id="9e878970-88e3-4ed9-98a0-140999d9ed93" timestamp="2026-03-16T15:32:06.328Z" tests="1" failures="0" errors="0" time="0.006">
-    <testcase name="Status is 200" time="0.006" classname="03NegativeValidationFlowDeleteNegativeFlowTrip"/>
+  <testsuite name="03 - Negative Validation Flow / Delete negative-flow trip" id="94368bdd-2bd6-4e51-aa61-220b47ca6ae9" timestamp="2026-03-20T18:35:26.806Z" tests="1" failures="0" errors="0" time="0.007">
+    <testcase name="Status is 200" time="0.007" classname="03NegativeValidationFlowDeleteNegativeFlowTrip"/>
   </testsuite>
-  <testsuite name="99 - Transaction Get APIs / Get all transactions in a trip" id="4f2168e1-35d6-469c-bf08-c3623f32f774" timestamp="2026-03-16T15:32:06.328Z" tests="1" failures="0" errors="0" time="0.004">
-    <testcase name="Placeholder" time="0.004" classname="99TransactionGetApIsGetAllTransactionsInATrip"/>
+  <testsuite name="99 - Transaction Get APIs / Get all transactions in a trip" id="928b2847-8654-4acb-9d8f-9ba35e3966e6" timestamp="2026-03-20T18:35:26.806Z" tests="1" failures="0" errors="0" time="0.008">
+    <testcase name="Placeholder" time="0.008" classname="99TransactionGetApIsGetAllTransactionsInATrip"/>
   </testsuite>
-  <testsuite name="99 - Transaction Get APIs / Get single transaction by id" id="225418bd-c40b-45ff-8177-6561b04c1ac3" timestamp="2026-03-16T15:32:06.328Z" tests="1" failures="0" errors="0" time="0.004">
+  <testsuite name="99 - Transaction Get APIs / Get single transaction by id" id="d854cda6-2863-4bbd-813d-40d9db31e18e" timestamp="2026-03-20T18:35:26.806Z" tests="1" failures="0" errors="0" time="0.004">
     <testcase name="Placeholder" time="0.004" classname="99TransactionGetApIsGetSingleTransactionById"/>
   </testsuite>
 </testsuites>

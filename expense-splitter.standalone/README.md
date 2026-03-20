@@ -24,13 +24,13 @@ The standalone module contains the pure business core of the system. It owns the
 The standalone module is intentionally designed as the reusable computation engine for the entire project. The webservice depends on it, but the standalone module does not depend on the webservice. This keeps the settlement logic portable, testable, and stable. Any change to expense computation rules, balance calculation, settlement modes, or optimization logic should be made here first.
 
 ## Core Package Structure
-- `com.getcollate.trip`
+- `com.split.trip`
   - Core domain entities such as `Trip` and `Participant`.
-- `com.getcollate.trip.accounts`
+- `com.split.trip.accounts`
   - Transaction model, categories, share types, and balance-related concepts.
-- `com.getcollate.trip.accounts.settler`
+- `com.split.trip.accounts.settler`
   - Settlement contracts and implementations such as `BasicSettler` and `SimplifiedSettler`.
-- `com.getcollate.trip.accounts.settler.factory`
+- `com.split.trip.accounts.settler.factory`
   - Factory used to choose the correct settler for a requested settlement mode.
 
 ## Design Highlights
